@@ -1,0 +1,9 @@
+<h2>
+<a href="{% url 'vuln:home' %}" class="btn btn-lg btn-link" role="button">Vulnerabilidades</a>
+{% if vuln %}
+&gt; <a href="{% url 'vuln:vuln_view' vuln.id %}">{{ vuln.name }}</a>
+{% endif %}
+{% if title %}
+&gt; {{ title }}
+{% endif %}
+</h2>

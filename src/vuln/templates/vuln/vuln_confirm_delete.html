@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{% include "vuln/nav.html" with vuln=vuln title="Delete" %}
+<form method="post">{% csrf_token %}
+    Are you sure you want to DELETE "{{ object }}" ?
+    <input type="submit" class="btn btn-danger" value="Sim" />
+</form>
+{% endblock %}

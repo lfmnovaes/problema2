@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{% include "vuln/nav.html" with vuln=vuln title="Edit" %}
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn btn-success" value="OK" />
+</form>
+{% endblock %}

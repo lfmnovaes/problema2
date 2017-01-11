@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{% include "vuln/nav.html" with vuln=vuln title="Detalhes" %}
+
+<h2>Descrição</h2>
+<p>
+{{ vuln.desc }}
+</p>
+
+{% endblock %}
